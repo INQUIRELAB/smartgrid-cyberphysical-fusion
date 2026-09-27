@@ -1,0 +1,36 @@
+{
+  "K": 162,
+  "far_t": 0.07777777777777778,
+  "far_m": 0.1,
+  "res": {
+    "0.5": {
+      "temporal": 1.0,
+      "manifold": 1.0,
+      "fused": 1.0,
+      "manifold_lo95": 0.85
+    },
+    "0.1": {
+      "temporal": 1.0,
+      "manifold": 1.0,
+      "fused": 1.0,
+      "manifold_lo95": 0.85
+    },
+    "0.05": {
+      "temporal": 0.75,
+      "manifold": 1.0,
+      "fused": 1.0,
+      "manifold_lo95": 0.85
+    },
+    "0.02": {
+      "temporal": 0.15,
+      "manifold": 1.0,
+      "fused": 1.0,
+      "manifold_lo95": 0.85
+    }
+  },
+  "bdd": {
+    "Jc": 478.02947014809394,
+    "Ja": 477.8182235281728,
+    "thr": 538.870751464424
+  }
+}

@@ -1,0 +1,53 @@
+======================================================================
+EXPERIMENT 5 — AC stealthy FDI + temporal-consistency detection
+======================================================================
+IEEE-14 | states n=27 (theta:13, |V|:14) | measurements m=72 | redundancy m/n=2.67 | chi2 dof=45
+chi-square threshold (99%) = 70.0 | LNR threshold = 3.0
+
+[sanity] clean chi-square J: mean=38.1 (dof=45, thr=70.0) -> flagged=0%   (expect ~1%)
+
+[stealthy AC-exact FDI] does static BDD notice? (target bus-3 angle +4 deg)
+  chi-square J : clean=43.6  attacked=43.6  (threshold 70.0) -> attacked flagged=0%
+  max LNR       : clean=2.47  attacked=2.47  (threshold 3.0) -> attacked flagged=5%
+  state estimate moved by 4.00 deg at the target bus (attack SUCCEEDS, BDD blind).
+
+[knowledge gradient] AC chi-square vs attacker AC-knowledge alpha (0=DC,1=AC-exact):
+  alpha=0.0  J=   176.8  [FLAGGED]
+  alpha=0.1  J=   136.5  [FLAGGED]
+  alpha=0.2  J=   118.6  [FLAGGED]
+  alpha=0.3  J=    99.2  [FLAGGED]
+  alpha=0.4  J=    86.6  [FLAGGED]
+  alpha=0.5  J=    68.6  [stealthy]
+  alpha=0.6  J=    61.0  [stealthy]
+  alpha=0.7  J=    56.6  [stealthy]
+  alpha=0.8  J=    47.0  [stealthy]
+  alpha=0.9  J=    50.5  [stealthy]
+  alpha=1.0  J=    42.5  [stealthy]
+
+[temporal detector] calibrated CUSUM (Holt-trend innovation):
+  threshold H=13.08 calibrated to target FAR=5%; measured benign FAR=5% over 20 streams.
+  persistent stealthy STEP at t0=32:
+    static BDD chi-square unchanged (44.5==44.5, above) -> NOT detected.
+    temporal CUSUM detects at t=32 (delay=0 steps); benign stream detect=-1 (-1 = no false alarm).
+
+[honest limit #1] temporal detection vs ramp rate (horizon = 32 steps):
+  ramp= 2.00 deg/step -> P(detect)=1.00  median delay=2 steps
+  ramp= 1.00 deg/step -> P(detect)=1.00  median delay=4 steps
+  ramp= 0.50 deg/step -> P(detect)=1.00  median delay=6 steps
+  ramp= 0.25 deg/step -> P(detect)=1.00  median delay=13 steps
+  ramp= 0.10 deg/step -> P(detect)=0.00  median delay=n/a steps
+  ramp= 0.05 deg/step -> P(detect)=0.00  median delay=n/a steps
+  => faster ramps caught almost immediately; as the ramp slows the
+     undetected window grows, and a ramp below the SE-noise floor escapes
+     the horizon entirely (the honest fundamental limit).
+
+[honest limit #2] detectability floor: P(detect) vs step-bias size:
+  step=6.00 deg -> P(detect)=1.00
+  step=4.00 deg -> P(detect)=1.00
+  step=3.00 deg -> P(detect)=1.00
+  step=2.00 deg -> P(detect)=0.33
+  step=1.00 deg -> P(detect)=0.00
+
+[static BDD blindness] AC-exact stealthy FDI vs benign, static chi-square:
+  mean J benign=46.0  attacked=46.0  (KS two-sample p=1.00 -> distributions statistically identical)
+  AUC static chi-square = 0.510 (~0.5 = blind)  |  AUC temporal CUSUM = 1.000

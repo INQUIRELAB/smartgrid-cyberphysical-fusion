@@ -1,0 +1,56 @@
+{
+  "n_states": 27,
+  "m_meas": 72,
+  "redundancy": 2.667,
+  "chi2_dof": 45,
+  "chi2_thr": 69.96,
+  "stealthy_J_clean": 43.57,
+  "stealthy_J_attacked": 43.6,
+  "stealthy_flag_rate": 0.0,
+  "static_auc": 0.51,
+  "temporal_auc": 1.0,
+  "static_ks_pvalue": 1.0,
+  "cusum_threshold": 13.08,
+  "target_far": 0.05,
+  "measured_far": 0.05,
+  "step_detect_delay": 0,
+  "benign_false_alarm": false,
+  "ramp_rates": [
+    2.0,
+    1.0,
+    0.5,
+    0.25,
+    0.1,
+    0.05
+  ],
+  "ramp_pdetect": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0
+  ],
+  "ramp_median_delay": [
+    2.0,
+    4.0,
+    6.0,
+    13.0,
+    null,
+    null
+  ],
+  "step_sizes": [
+    6.0,
+    4.0,
+    3.0,
+    2.0,
+    1.0
+  ],
+  "step_pdetect": [
+    1.0,
+    1.0,
+    1.0,
+    0.3333333333333333,
+    0.0
+  ]
+}

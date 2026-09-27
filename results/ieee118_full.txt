@@ -1,0 +1,22 @@
+FULL END-TO-END IEEE 118-Bus VALIDATION (no analytical identity, no fixed Jacobian)
+states n=235, measurements m=700, redundancy 2.98
+streams: 140 calibration + 90 held-out benign + 50 per ramp rate; 40 steps each; 3-iteration Gauss-Newton with per-iteration Jacobian
+manifold dimension K=8, selected by cross-validation on benign streams only
+target false-alarm rate 5%; achieved on held-out benign: temporal 0.067, manifold 0.011, fused 0.056
+
+Bad-data detection under the full estimator (AC-exact consistent injection):
+  chi-square: benign 417 vs attacked 417 (threshold 539) -> undetected
+  largest normalized residual: 2.95 vs 2.95 (threshold 3.0)
+  estimated target bias: 4.02 deg (injected 4.0)
+
+ ramp (deg/step)   temporal   manifold      fused  manifold LB95
+----------------------------------------------------------------
+            0.50       1.00       1.00       1.00           0.94
+            0.10       1.00       1.00       1.00           0.94
+            0.05       0.82       1.00       1.00           0.94
+            0.02       0.14       0.48       0.40           0.34
+
+Reading: with the estimator solved at every timestep and the Jacobian recomputed at every
+iteration, an AC-consistent stealthy injection still passes chi-square bad-data detection,
+and slow ramps still escape the forecasting-aided temporal test while the rate-invariant
+manifold test detects them at a matched false-alarm rate.

@@ -1,0 +1,18 @@
+SmartGrid Cyber-Physical Fusion -- results
+windows=1529, window=0.5s
+Physical-only : acc=0.812 macroF1=0.816
+Cyber-only    : acc=0.856 macroF1=0.857
+FUSION        : acc=0.961 macroF1=0.961
+
+              precision    recall  f1-score   support
+
+    backdoor       0.91      0.96      0.93        51
+      benign       0.98      0.91      0.94        88
+  bruteforce       0.91      0.96      0.94        54
+         fdi       1.00      1.00      1.00        63
+  ransomware       0.97      0.98      0.98        63
+reverseshell       0.98      0.97      0.98        64
+
+    accuracy                           0.96       383
+   macro avg       0.96      0.96      0.96       383
+weighted avg       0.96      0.96      0.96       383

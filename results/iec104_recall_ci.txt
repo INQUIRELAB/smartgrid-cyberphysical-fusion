@@ -1,0 +1,8 @@
+IEC-104 HMI per-attack recall with Wilson 95% CI (comment 177)
+overall attack-F1=0.533 benign FPR=0.024 (n_benign=6470)
+
+  report_block : recall 0.98 [0.92,1.00]  (64/65 win)
+  replay       : recall 0.87 [0.79,0.92]  (91/105 win)
+  mitm         : recall 0.35 [0.29,0.42]  (73/207 win)
+  masquerade   : recall 0.32 [0.25,0.40]  (48/148 win)
+  value_change : recall 0.11 [0.06,0.18]  (12/112 win)

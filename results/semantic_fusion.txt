@@ -1,0 +1,22 @@
+IEEE-14 SEMANTIC-MANIPULATION OBSERVABILITY TAXONOMY
+branches(m)=20 states(n)=13 noise floor=0.0015
+LS residual: benign=3.90e-03  naive-value=6.84e-02  stealthy-FDI=3.85e-03
+
+View     | structural  naive-val   stealthy | benign FPR
+------------------------------------------------------------
+Cyber    |       1.00       0.09       0.09 |       0.08
+Physics  |       0.04       1.00       0.03 |       0.05
+Fusion   |       1.00       1.00       0.05 |       0.06
+
+Reading: cyber catches structural only; physics catches naive value only;
+FUSION catches structural + naive value; stealthy FDI defeats all three
+(the fundamental limit -> escalate via the selective policy).
+
+Graded topology-knowledge sweep (value attack -> stealthy):
+ knowledge  mean residual  physics recall
+        0%       7.57e+01            0.51
+       20%       1.94e+02            0.91
+       40%       2.60e+02            1.00
+       60%       2.83e+02            0.99
+       80%       2.09e+02            0.93
+      100%       3.75e-03            0.04

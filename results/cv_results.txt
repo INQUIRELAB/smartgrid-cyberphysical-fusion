@@ -1,0 +1,4 @@
+5-fold cross-validated macro-F1
+Physical : 0.770 +/- 0.018
+Cyber    : 0.851 +/- 0.010
+Fusion   : 0.956 +/- 0.013

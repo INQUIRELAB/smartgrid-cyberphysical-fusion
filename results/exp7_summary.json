@@ -1,0 +1,51 @@
+{
+  "system": "IEEE-118",
+  "n_states": 235,
+  "m_meas": 700,
+  "manifold_dim": 57,
+  "trials_per_point": 50,
+  "far_temporal": 0.03,
+  "far_manifold": 0.045,
+  "far_fused": 0.04,
+  "ramp_rates": [
+    2.0,
+    1.0,
+    0.5,
+    0.25,
+    0.1,
+    0.05,
+    0.02
+  ],
+  "pdet_temporal": [
+    0.98,
+    1.0,
+    0.98,
+    0.62,
+    0.14,
+    0.02,
+    0.04
+  ],
+  "pdet_manifold": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "pdet_fused": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "auc_slowramp": {
+    "temporal": 0.535,
+    "manifold": 1.0
+  },
+  "bias_limit_deg": 0.627
+}

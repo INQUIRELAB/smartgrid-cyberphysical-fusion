@@ -1,0 +1,19 @@
+PARTIAL END-TO-END IEEE-118 VALIDATION (real per-step AC-WLS under attack; comment #205)
+states NX=235, meas M=700, benign manifold dim K=162 (99.9% var), 20 trials/ramp, 5% FAR
+measured FAR: temporal=0.08 manifold=0.10
+
+REAL BDD blindness check (full re-linearized WLS):
+  chi-square clean=478 attacked=478 (thr=539) -> PASS (blind)
+  estimator moved target by 4.03 deg (injected 4.0)
+
+ ramp(deg/step)   temporal   manifold      fused  manif.LB95
+------------------------------------------------------------
+           0.50       1.00       1.00       1.00        0.85
+           0.10       1.00       1.00       1.00        0.85
+           0.05       0.75       1.00       1.00        0.85
+           0.02       0.15       1.00       1.00        0.85
+
+Reading: a real per-step WLS solve reproduces the analytical picture — a consistent stealthy
+FDI passes chi-square BDD, slow ramps escape the temporal test, but the rate-invariant manifold
+test still detects them. This upgrades the IEEE-118 result from analytical extrapolation to a
+partial end-to-end validation; a large-scale full run remains future work.

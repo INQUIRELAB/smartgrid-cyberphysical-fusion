@@ -1,0 +1,13 @@
+ROLLING-ORIGIN TEMPORAL CV (dataset 1, fusion RF)
+windows total: 1529  |  per class: backdoor=204, benign=352, bruteforce=216, fdi=251, ransomware=252, reverseshell=254
+origin 0.50  test block 0.50-0.65  n= 232  macro-F1=0.966
+origin 0.55  test block 0.55-0.70  n= 229  macro-F1=0.963
+origin 0.60  test block 0.60-0.75  n= 227  macro-F1=0.925
+origin 0.65  test block 0.65-0.80  n= 229  macro-F1=0.854
+origin 0.70  test block 0.70-0.85  n= 230  macro-F1=0.879
+origin 0.75  test block 0.75-0.90  n= 230  macro-F1=0.866
+origin 0.80  test block 0.80-0.95  n= 230  macro-F1=0.847
+origin 0.85  test block 0.85-1.00  n= 226  macro-F1=0.773
+rolling-origin mean +/- std : 0.884 +/- 0.061
+range [min, max]            : [0.773, 0.966]
+single 75/25 temporal split : 0.799  (n=381)

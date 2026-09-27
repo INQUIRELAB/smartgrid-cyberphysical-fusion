@@ -1,0 +1,7 @@
+IEEE-14 PHYSICS-FEASIBLE FDI + FEASIBLE-SPACE ADVERSARIAL TRAINING
+branches(m)=20  states(n)=13  metered=8  gamma=0.09  target_bias=0.14
+feasible attack LS residual (mean) = 3.86e-03  (= benign noise floor; stealthy)
+
+clean detection macro-F1        : undefended=0.886  adv-trained=0.839
+recall under ES evasion          : undefended=0.263  adv-trained=0.525
+recovery from feasible adv. train: +0.263

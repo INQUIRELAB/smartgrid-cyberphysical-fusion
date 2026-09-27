@@ -1,0 +1,10 @@
+HYPERPARAMETER TUNING
+best params: {'n_estimators': 300, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': None}
+CV best macro-F1: 0.955
+test macro-F1  default=0.956  tuned=0.956
+
+ADVERSARIAL ROBUSTNESS (physically-constrained evasion)
+clean: 0.956
+eps=0.05: undefended=0.818  defended=0.939
+eps=0.10: undefended=0.797  defended=0.926
+eps=0.20: undefended=0.758  defended=0.859

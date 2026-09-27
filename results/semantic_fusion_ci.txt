@@ -1,0 +1,11 @@
+IEEE 14-Bus OBSERVABILITY TAXONOMY — 20 seeds, Wilson 95% CIs on pooled test windows
+branches(m)=20 states(n)=13  target benign FPR=0.05
+
+View     |             structural                  naive               stealthy |    benign FPR (measured)
+----------------------------------------------------------------------------------------------------------
+Cyber    |       1.00 [1.00,1.00]       0.06 [0.05,0.06]       0.06 [0.05,0.06] | 0.059 [0.054,0.064]
+Physics  |       0.06 [0.06,0.07]       0.99 [0.99,1.00]       0.07 [0.06,0.07] | 0.062 [0.058,0.068]
+Fusion   |       1.00 [1.00,1.00]       1.00 [0.99,1.00]       0.06 [0.06,0.07] | 0.062 [0.058,0.068]
+
+CALIBRATION CHECK (comment 197): Cyber benign FPR=0.059 95% CI [0.054,0.064] over 9112 windows.
+  Target 5% is NOT inside CI -> recalibrate.

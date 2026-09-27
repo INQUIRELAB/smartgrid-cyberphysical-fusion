@@ -1,0 +1,5 @@
+LEAKAGE-AWARE EVALUATION (dataset 1, fusion RF)
+Random shuffled 5-fold : 0.956 +/- 0.012   (optimistic)
+Time-blocked 5-fold    : 0.926 +/- 0.059   (leakage-controlled)
+Single temporal hold-out (last 25%): 0.800
+Leakage gap (random - blocked): 0.030

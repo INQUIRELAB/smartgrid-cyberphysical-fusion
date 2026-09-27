@@ -1,0 +1,5 @@
+HEAD-TO-HEAD on identical splits (dataset 1, macro-F1)
+Graph: symmetric k-NN (k=10) over standardized fused features; GCN 2-layer, H=64.
+
+Random 75/25 :  RF=0.959   GCN=0.831
+Temporal 25% :  RF=0.800   GCN=0.700
